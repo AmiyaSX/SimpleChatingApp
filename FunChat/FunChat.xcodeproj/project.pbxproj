@@ -1,0 +1,699 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7A58ECAD28869C54006D59DC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58ECAC28869C54006D59DC /* Message.swift */; };
+		7AC4A6EE288691B800DA588E /* FunChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A6ED288691B800DA588E /* FunChatApp.swift */; };
+		7AC4A6F0288691B800DA588E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A6EF288691B800DA588E /* ContentView.swift */; };
+		7AC4A6F2288691BD00DA588E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC4A6F1288691BD00DA588E /* Assets.xcassets */; };
+		7AC4A6F5288691BD00DA588E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC4A6F4288691BD00DA588E /* Preview Assets.xcassets */; };
+		7AC4A6FF288691BD00DA588E /* FunChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A6FE288691BD00DA588E /* FunChatTests.swift */; };
+		7AC4A709288691BD00DA588E /* FunChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A708288691BD00DA588E /* FunChatUITests.swift */; };
+		7AC4A70B288691BD00DA588E /* FunChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A70A288691BD00DA588E /* FunChatUITestsLaunchTests.swift */; };
+		7AC4A71B288699CB00DA588E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A71A288699CB00DA588E /* SplashView.swift */; };
+		7AC4A71D288699DE00DA588E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A71C288699DE00DA588E /* LoginView.swift */; };
+		7AC4A71F28869A3500DA588E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A71E28869A3500DA588E /* ProfileView.swift */; };
+		7AC4A72128869A4F00DA588E /* ChattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A72028869A4F00DA588E /* ChattingView.swift */; };
+		7AC4A72328869B0400DA588E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A72228869B0400DA588E /* HomeView.swift */; };
+		A28146E8D45569A7823DB98D /* Pods_FunChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527EF2D7E47E67A4E9D711FA /* Pods_FunChat.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7AC4A6FB288691BD00DA588E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AC4A6E2288691B800DA588E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AC4A6E9288691B800DA588E;
+			remoteInfo = FunChat;
+		};
+		7AC4A705288691BD00DA588E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AC4A6E2288691B800DA588E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AC4A6E9288691B800DA588E;
+			remoteInfo = FunChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		527EF2D7E47E67A4E9D711FA /* Pods_FunChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A58ECAC28869C54006D59DC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7AC4A6EA288691B800DA588E /* FunChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC4A6ED288691B800DA588E /* FunChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunChatApp.swift; sourceTree = "<group>"; };
+		7AC4A6EF288691B800DA588E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7AC4A6F1288691BD00DA588E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7AC4A6F4288691BD00DA588E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7AC4A6FA288691BD00DA588E /* FunChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC4A6FE288691BD00DA588E /* FunChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunChatTests.swift; sourceTree = "<group>"; };
+		7AC4A704288691BD00DA588E /* FunChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC4A708288691BD00DA588E /* FunChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunChatUITests.swift; sourceTree = "<group>"; };
+		7AC4A70A288691BD00DA588E /* FunChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7AC4A71A288699CB00DA588E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		7AC4A71C288699DE00DA588E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7AC4A71E28869A3500DA588E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		7AC4A72028869A4F00DA588E /* ChattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingView.swift; sourceTree = "<group>"; };
+		7AC4A72228869B0400DA588E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C4CF3E0892CDDBE6327E6C77 /* Pods-FunChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunChat.release.xcconfig"; path = "Target Support Files/Pods-FunChat/Pods-FunChat.release.xcconfig"; sourceTree = "<group>"; };
+		DB7104C42F847425C0F918BA /* Pods-FunChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunChat.debug.xcconfig"; path = "Target Support Files/Pods-FunChat/Pods-FunChat.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7AC4A6E7288691B800DA588E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28146E8D45569A7823DB98D /* Pods_FunChat.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC4A6F7288691BD00DA588E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC4A701288691BD00DA588E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3051EFFC8D333E3D113EAAEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				527EF2D7E47E67A4E9D711FA /* Pods_FunChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A58ECAE28869CA3006D59DC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		7AC4A6E1288691B800DA588E = {
+			isa = PBXGroup;
+			children = (
+				7AC4A6EC288691B800DA588E /* FunChat */,
+				7AC4A6FD288691BD00DA588E /* FunChatTests */,
+				7AC4A707288691BD00DA588E /* FunChatUITests */,
+				7AC4A6EB288691B800DA588E /* Products */,
+				8C3E98A772FD99B25DF3BE5B /* Pods */,
+				3051EFFC8D333E3D113EAAEF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7AC4A6EB288691B800DA588E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4A6EA288691B800DA588E /* FunChat.app */,
+				7AC4A6FA288691BD00DA588E /* FunChatTests.xctest */,
+				7AC4A704288691BD00DA588E /* FunChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7AC4A6EC288691B800DA588E /* FunChat */ = {
+			isa = PBXGroup;
+			children = (
+				7A58ECAE28869CA3006D59DC /* Config */,
+				7AC4A72428869B2600DA588E /* Data */,
+				7AC4A719288698B700DA588E /* Utils */,
+				7AC4A718288698A200DA588E /* ViewModel */,
+				7AC4A7172886989800DA588E /* View */,
+				7AC4A6ED288691B800DA588E /* FunChatApp.swift */,
+				7AC4A6EF288691B800DA588E /* ContentView.swift */,
+				7AC4A6F1288691BD00DA588E /* Assets.xcassets */,
+				7AC4A6F3288691BD00DA588E /* Preview Content */,
+			);
+			path = FunChat;
+			sourceTree = "<group>";
+		};
+		7AC4A6F3288691BD00DA588E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4A6F4288691BD00DA588E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7AC4A6FD288691BD00DA588E /* FunChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4A6FE288691BD00DA588E /* FunChatTests.swift */,
+			);
+			path = FunChatTests;
+			sourceTree = "<group>";
+		};
+		7AC4A707288691BD00DA588E /* FunChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4A708288691BD00DA588E /* FunChatUITests.swift */,
+				7AC4A70A288691BD00DA588E /* FunChatUITestsLaunchTests.swift */,
+			);
+			path = FunChatUITests;
+			sourceTree = "<group>";
+		};
+		7AC4A7172886989800DA588E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AC4A71A288699CB00DA588E /* SplashView.swift */,
+				7AC4A71C288699DE00DA588E /* LoginView.swift */,
+				7AC4A71E28869A3500DA588E /* ProfileView.swift */,
+				7AC4A72028869A4F00DA588E /* ChattingView.swift */,
+				7AC4A72228869B0400DA588E /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AC4A718288698A200DA588E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7AC4A719288698B700DA588E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7AC4A72428869B2600DA588E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7A58ECAC28869C54006D59DC /* Message.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8C3E98A772FD99B25DF3BE5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB7104C42F847425C0F918BA /* Pods-FunChat.debug.xcconfig */,
+				C4CF3E0892CDDBE6327E6C77 /* Pods-FunChat.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7AC4A6E9288691B800DA588E /* FunChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AC4A70E288691BD00DA588E /* Build configuration list for PBXNativeTarget "FunChat" */;
+			buildPhases = (
+				E2D7EB0A630B29EFB473C5FD /* [CP] Check Pods Manifest.lock */,
+				7AC4A6E6288691B800DA588E /* Sources */,
+				7AC4A6E7288691B800DA588E /* Frameworks */,
+				7AC4A6E8288691B800DA588E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FunChat;
+			productName = FunChat;
+			productReference = 7AC4A6EA288691B800DA588E /* FunChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7AC4A6F9288691BD00DA588E /* FunChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AC4A711288691BD00DA588E /* Build configuration list for PBXNativeTarget "FunChatTests" */;
+			buildPhases = (
+				7AC4A6F6288691BD00DA588E /* Sources */,
+				7AC4A6F7288691BD00DA588E /* Frameworks */,
+				7AC4A6F8288691BD00DA588E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AC4A6FC288691BD00DA588E /* PBXTargetDependency */,
+			);
+			name = FunChatTests;
+			productName = FunChatTests;
+			productReference = 7AC4A6FA288691BD00DA588E /* FunChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7AC4A703288691BD00DA588E /* FunChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AC4A714288691BD00DA588E /* Build configuration list for PBXNativeTarget "FunChatUITests" */;
+			buildPhases = (
+				7AC4A700288691BD00DA588E /* Sources */,
+				7AC4A701288691BD00DA588E /* Frameworks */,
+				7AC4A702288691BD00DA588E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7AC4A706288691BD00DA588E /* PBXTargetDependency */,
+			);
+			name = FunChatUITests;
+			productName = FunChatUITests;
+			productReference = 7AC4A704288691BD00DA588E /* FunChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7AC4A6E2288691B800DA588E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7AC4A6E9288691B800DA588E = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					7AC4A6F9288691BD00DA588E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7AC4A6E9288691B800DA588E;
+					};
+					7AC4A703288691BD00DA588E = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7AC4A6E9288691B800DA588E;
+					};
+				};
+			};
+			buildConfigurationList = 7AC4A6E5288691B800DA588E /* Build configuration list for PBXProject "FunChat" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7AC4A6E1288691B800DA588E;
+			productRefGroup = 7AC4A6EB288691B800DA588E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7AC4A6E9288691B800DA588E /* FunChat */,
+				7AC4A6F9288691BD00DA588E /* FunChatTests */,
+				7AC4A703288691BD00DA588E /* FunChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7AC4A6E8288691B800DA588E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC4A6F5288691BD00DA588E /* Preview Assets.xcassets in Resources */,
+				7AC4A6F2288691BD00DA588E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC4A6F8288691BD00DA588E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC4A702288691BD00DA588E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2D7EB0A630B29EFB473C5FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FunChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AC4A6E6288691B800DA588E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC4A6F0288691B800DA588E /* ContentView.swift in Sources */,
+				7AC4A72328869B0400DA588E /* HomeView.swift in Sources */,
+				7AC4A6EE288691B800DA588E /* FunChatApp.swift in Sources */,
+				7AC4A72128869A4F00DA588E /* ChattingView.swift in Sources */,
+				7AC4A71F28869A3500DA588E /* ProfileView.swift in Sources */,
+				7A58ECAD28869C54006D59DC /* Message.swift in Sources */,
+				7AC4A71D288699DE00DA588E /* LoginView.swift in Sources */,
+				7AC4A71B288699CB00DA588E /* SplashView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC4A6F6288691BD00DA588E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC4A6FF288691BD00DA588E /* FunChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AC4A700288691BD00DA588E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AC4A70B288691BD00DA588E /* FunChatUITestsLaunchTests.swift in Sources */,
+				7AC4A709288691BD00DA588E /* FunChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7AC4A6FC288691BD00DA588E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AC4A6E9288691B800DA588E /* FunChat */;
+			targetProxy = 7AC4A6FB288691BD00DA588E /* PBXContainerItemProxy */;
+		};
+		7AC4A706288691BD00DA588E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AC4A6E9288691B800DA588E /* FunChat */;
+			targetProxy = 7AC4A705288691BD00DA588E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7AC4A70C288691BD00DA588E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7AC4A70D288691BD00DA588E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7AC4A70F288691BD00DA588E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB7104C42F847425C0F918BA /* Pods-FunChat.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FunChat/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FunChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7AC4A710288691BD00DA588E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4CF3E0892CDDBE6327E6C77 /* Pods-FunChat.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FunChat/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FunChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7AC4A712288691BD00DA588E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FunChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunChat.app/FunChat";
+			};
+			name = Debug;
+		};
+		7AC4A713288691BD00DA588E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FunChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FunChat.app/FunChat";
+			};
+			name = Release;
+		};
+		7AC4A715288691BD00DA588E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FunChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FunChat;
+			};
+			name = Debug;
+		};
+		7AC4A716288691BD00DA588E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.FunChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FunChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7AC4A6E5288691B800DA588E /* Build configuration list for PBXProject "FunChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC4A70C288691BD00DA588E /* Debug */,
+				7AC4A70D288691BD00DA588E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AC4A70E288691BD00DA588E /* Build configuration list for PBXNativeTarget "FunChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC4A70F288691BD00DA588E /* Debug */,
+				7AC4A710288691BD00DA588E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AC4A711288691BD00DA588E /* Build configuration list for PBXNativeTarget "FunChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC4A712288691BD00DA588E /* Debug */,
+				7AC4A713288691BD00DA588E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AC4A714288691BD00DA588E /* Build configuration list for PBXNativeTarget "FunChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7AC4A715288691BD00DA588E /* Debug */,
+				7AC4A716288691BD00DA588E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7AC4A6E2288691B800DA588E /* Project object */;
+}

@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+# optionally complete and uncomment if compilation issues arise
+# project '<path to project relative to this Podfile>/<name of project without extension>'
+# workspace 'MyPubNubProject'
+use_frameworks!
+workspace 'FunChat.xcworkspace'
+project 'FunChat.xcodeproj'
+# replace next lines name in quote with your project name
+target 'FunChat' do
+# Should only use this with projects
+# that must have a minimum deployment
+# target of iOS 8
+platform :ios, '13.0'
+#pod "FunChat", "~> 4"
+end
