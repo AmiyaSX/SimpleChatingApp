@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: f32532a5f9c382a1f6ea317a29b5ef73e25e998e
+PODS:
+  - chatPlayground (0.1.0)
+
+DEPENDENCIES:
+  - chatPlayground (from `chatPlayground`)
+
+EXTERNAL SOURCES:
+  chatPlayground:
+    :path: chatPlayground
+
+SPEC CHECKSUMS:
+  chatPlayground: c869bf83f180f4b748630b7b119c9907ff0a8514
+
+PODFILE CHECKSUM: f596eb44b179e3ffc0dd0dfe414bcc50b54b2c99
 
 COCOAPODS: 1.11.3

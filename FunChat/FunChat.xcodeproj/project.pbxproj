@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1506B9288BB1E900E9D88A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1506B8288BB1E900E9D88A /* UserInfo.swift */; };
+		7A1506BB288C01EC00E9D88A /* DisplayUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1506BA288C01EC00E9D88A /* DisplayUtil.swift */; };
 		7A58ECAD28869C54006D59DC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58ECAC28869C54006D59DC /* Message.swift */; };
+		7A58ECB02886A444006D59DC /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58ECAF2886A444006D59DC /* MessageViewModel.swift */; };
+		7A58ECB22886A699006D59DC /* MessageManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58ECB12886A699006D59DC /* MessageManagerProtocol.swift */; };
 		7AC4A6EE288691B800DA588E /* FunChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A6ED288691B800DA588E /* FunChatApp.swift */; };
 		7AC4A6F0288691B800DA588E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4A6EF288691B800DA588E /* ContentView.swift */; };
 		7AC4A6F2288691BD00DA588E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AC4A6F1288691BD00DA588E /* Assets.xcassets */; };
@@ -42,7 +46,11 @@
 
 /* Begin PBXFileReference section */
 		527EF2D7E47E67A4E9D711FA /* Pods_FunChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A1506B8288BB1E900E9D88A /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		7A1506BA288C01EC00E9D88A /* DisplayUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayUtil.swift; sourceTree = "<group>"; };
 		7A58ECAC28869C54006D59DC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7A58ECAF2886A444006D59DC /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		7A58ECB12886A699006D59DC /* MessageManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManagerProtocol.swift; sourceTree = "<group>"; };
 		7AC4A6EA288691B800DA588E /* FunChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC4A6ED288691B800DA588E /* FunChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunChatApp.swift; sourceTree = "<group>"; };
 		7AC4A6EF288691B800DA588E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 		7A58ECAE28869CA3006D59DC /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				7A58ECB12886A699006D59DC /* MessageManagerProtocol.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -181,6 +190,7 @@
 		7AC4A718288698A200DA588E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7A58ECAF2886A444006D59DC /* MessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +198,7 @@
 		7AC4A719288698B700DA588E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7A1506BA288C01EC00E9D88A /* DisplayUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7A58ECAC28869C54006D59DC /* Message.swift */,
+				7A1506B8288BB1E900E9D88A /* UserInfo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -206,7 +218,6 @@
 				DB7104C42F847425C0F918BA /* Pods-FunChat.debug.xcconfig */,
 				C4CF3E0892CDDBE6327E6C77 /* Pods-FunChat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -221,6 +232,7 @@
 				7AC4A6E6288691B800DA588E /* Sources */,
 				7AC4A6E7288691B800DA588E /* Frameworks */,
 				7AC4A6E8288691B800DA588E /* Resources */,
+				1E5E86E1F774C345D1CFED2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -337,6 +349,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E5E86E1F774C345D1CFED2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FunChat/Pods-FunChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FunChat/Pods-FunChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FunChat/Pods-FunChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E2D7EB0A630B29EFB473C5FD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,12 +396,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC4A6F0288691B800DA588E /* ContentView.swift in Sources */,
+				7A58ECB02886A444006D59DC /* MessageViewModel.swift in Sources */,
 				7AC4A72328869B0400DA588E /* HomeView.swift in Sources */,
 				7AC4A6EE288691B800DA588E /* FunChatApp.swift in Sources */,
 				7AC4A72128869A4F00DA588E /* ChattingView.swift in Sources */,
+				7A58ECB22886A699006D59DC /* MessageManagerProtocol.swift in Sources */,
 				7AC4A71F28869A3500DA588E /* ProfileView.swift in Sources */,
 				7A58ECAD28869C54006D59DC /* Message.swift in Sources */,
+				7A1506BB288C01EC00E9D88A /* DisplayUtil.swift in Sources */,
 				7AC4A71D288699DE00DA588E /* LoginView.swift in Sources */,
+				7A1506B9288BB1E900E9D88A /* UserInfo.swift in Sources */,
 				7AC4A71B288699CB00DA588E /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

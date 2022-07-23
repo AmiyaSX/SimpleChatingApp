@@ -1,0 +1,22 @@
+{
+  "name": "chatPlayground",
+  "version": "0.1.0",
+  "summary": "A short description of chatPlayground.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/AmiyaSX/chatPlayground",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "AmiyaSX": "2668590277@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/AmiyaSX/chatPlayground.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "chatPlayground/Classes/**/*.{swift}"
+}

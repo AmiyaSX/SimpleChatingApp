@@ -7,9 +7,11 @@
 
 import Foundation
 //定义消息类型结构
-public class Message {
+public class Message: Codable {
+    
     private var uid: Int?
-    private var text: String?
+    
+    private var content: String?
     
     func getUid() -> Int? {
         return self.uid
@@ -17,10 +19,10 @@ public class Message {
     func setUid(_ uid: Int){
         self.uid = uid
     }
-    func getText() -> String? {
-        return self.text
+    func getContent() -> String? {
+        return self.content
     }
-    func setText(_ text: String) {
-        self.text = text
+    func setContent(_ content: String) {
+        self.content = content
     }
 }
