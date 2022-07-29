@@ -6,17 +6,24 @@
 //
 
 import SwiftUI
+import Starscream
 
 struct ChattingView: View {
     @StateObject private var messageViewModel = MessageViewModel()
     @State var userName: String?
     @State private var message: String = ""
     @State private var isEditing = false
-    @State private var isKeybordShow = false
+    @State private var isKeyboardShow = false
     @State private var sendUserInfo: UserInfo?
     @State private var receivedUserInfo: UserInfo?
     @State private var showAlert = false
     private var fromScene: Int32?
+    let url = URL(string: "https://xhzq.xyz/23333")
+//    private var messagesView: some View {
+//
+//
+    }
+    
     private var sendView: some View {
         HStack(spacing: 0) {
             ZStack(alignment: .leading) {
@@ -59,7 +66,7 @@ struct ChattingView: View {
         }.padding(.horizontal, 8)
         .padding(.vertical, 8)
         .background(Color.white)
-        
+        .keyboardAwarePadding(isKeyboardShow: $isKeyboardShow)
     }
     
     var body: some View {

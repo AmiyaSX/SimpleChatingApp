@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "chatPlayground/Classes/**/*.{swift}"
+  "source_files": "chatPlayground/Classes/**/*.{swift}",
+  "dependencies": {
+    "Starscream": [
+
+    ]
+  }
 }

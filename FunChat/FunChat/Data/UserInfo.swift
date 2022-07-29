@@ -7,9 +7,15 @@
 
 import Foundation
 
-class UserInfo {
-    var name: String?
-    var email: String?
-    var avatarUrl: String?
+public protocol UserApi: AnyObject {
+    var name: String? { get }
+    var uid: Int64 { get }
+    var email: String { get }
+    var token: String { get }
+    var isLogin: Bool { get }
+    var needRegister: Bool { get }
+    
+    func userRegister()
+    func userLogout()
     
 }

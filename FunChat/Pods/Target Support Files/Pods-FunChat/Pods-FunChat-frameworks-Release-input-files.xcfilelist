@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-FunChat/Pods-FunChat-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework
 ${BUILT_PRODUCTS_DIR}/chatPlayground/chatPlayground.framework

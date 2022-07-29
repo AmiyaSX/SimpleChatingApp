@@ -11,3 +11,4 @@ protocol MessageManagerProtocol {
     func sendMsg(msg: Message)
     func respondMsg(rMsgId: Int, msg: Message)
 }
+

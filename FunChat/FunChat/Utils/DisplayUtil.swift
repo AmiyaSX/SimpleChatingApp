@@ -21,6 +21,7 @@ class DisplayUtil {
     public static func getScreenWidth() -> CGFloat {
         return UIScreen.main.bounds.width
     }
+    
     public static func getScreenHeight() -> CGFloat {
         return UIScreen.main.bounds.height
     }

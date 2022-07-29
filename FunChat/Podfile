@@ -18,4 +18,5 @@ target 'FunChat' do
 # target of iOS 8
 platform :ios, '13.0'
 #pod "FunChat", "~> 4"
+pod 'Starscream', '~> 4.0.0'
 end

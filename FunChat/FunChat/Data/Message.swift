@@ -10,7 +10,7 @@ import Foundation
 public class Message: Codable {
     
     private var uid: Int?
-    
+    private var type: Int?
     private var content: String?
     
     func getUid() -> Int? {
