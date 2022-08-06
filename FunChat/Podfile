@@ -7,12 +7,8 @@ workspace 'FunChat.xcworkspace'
 project 'FunChat.xcodeproj'
 # replace next lines name in quote with your project name
 
-def chat_playground_pod
-    pod 'chatPlayground', :path => 'chatPlayground'
-end
 
 target 'FunChat' do
-  chat_playground_pod
 # Should only use this with projects
 # that must have a minimum deployment
 # target of iOS 8

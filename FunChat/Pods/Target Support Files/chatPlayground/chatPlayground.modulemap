@@ -1,6 +1,0 @@
-framework module chatPlayground {
-  umbrella header "chatPlayground-umbrella.h"
-
-  export *
-  module * { export * }
-}

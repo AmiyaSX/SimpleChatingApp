@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import Combine
 
 struct ContentView: View {
+    
+    @StateObject private var messageViewModel =  MessageViewModel()
+    @StateObject private var loginViewModel =  LoginViewModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            LoginView()
+        }
+        .environmentObject(loginViewModel)
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {

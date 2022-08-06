@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var messageViewModel =  MessageViewModel()
+    @StateObject private var loginViewModel =  LoginViewModel()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            LoginView()
+        }
+        .environmentObject(loginViewModel)
     }
 }
 

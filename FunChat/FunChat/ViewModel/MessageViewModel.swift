@@ -8,25 +8,115 @@ import Combine
 import Foundation
 import SwiftUI
 
-class MessageViewModel: ObservedObject {
-    @Published public var loadMessages: [Message] = []
+class MessageViewModel: ObservableObject {
+    var didChange = PassthroughSubject<Void, Never>()
+    public var loadMessages: [MessageInfo] = []
     @Published public var receiveNewMessages: [Message] = []
-    private var messageList: [Message] = []
-    private var messageMap: [String: Message] = [:]
+    public var messageList: [Message] = []
+    public var groups: [GroupInfo] = []
+    public var group: GroupInfo?
+    private var decoder = ApiClient.shared.decoder
+    private var encoder = ApiClient.shared.encoder
+    
+    private let defaults = UserDefaults.standard
+    
     private var toUid: Int64 = 0
+    
     init() {
         
     }
     
-    func sendMessage(content: String, fromScene: Int32) {
-        
+    func sendMessage(message: Message) {
+        messageList.append(message)
+        didChange.send(())
     }
     
-    func recieveMessage() {
-        
+    func loadMessage(date: String, groupId: String) {
+        let queryItems = [
+            URLQueryItem(name: "history", value: date),
+            URLQueryItem(name: "id", value: groupId)
+        ]
+        let request = ApiClient.shared.requestBuild(method: .get, suffix: Api.SUFFIX.MESSAGE, queryItems: queryItems)
+        URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) ->  Void  in
+            if  error !=  nil {
+                print (error.debugDescription)
+            } else {
+                do {
+                    guard let jsonData = data else {
+                        return
+                    }
+                    self.loadMessages = try
+                    self.decoder.decode([MessageInfo].self, from: jsonData)
+                    self.handleLoadMessage()
+                    print(self.loadMessages)
+                } catch {
+                    print("Json数据转struct失败\(error)")
+                }
+            }
     }
-
-    private func notifyMessageListChanged(messageList: [Message]) {
+        ).resume()
+    }
+    
+    private func handleLoadMessage() {
+        for msg in loadMessages {
+            if !msg.IsImage {
+                let isCrtUser = msg.Sender == self.defaults.integer(forKey: defaultKeys.id)
+                messageList.append(Message(content: msg.Content, isCurrentUser: isCrtUser))
+            } else {
+                
+            }
+           
+        }
+    }
+    
+    private func notifyMessageListChanged(messageList: [MessageInfo]) {
         loadMessages = messageList
     }
+    
+    func getAllGroupsInfo() {
+        let request = ApiClient.shared.requestBuild(method: .get, suffix: Api.SUFFIX.GROUPS)
+        URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) ->  Void  in
+            if  error !=  nil {
+                print (error.debugDescription)
+            } else {
+                do {
+                    guard let jsonData = data else {
+                        return
+                    }
+                    self.groups = try
+                    self.decoder.decode([GroupInfo].self, from: jsonData)
+                    print(self.groups)
+                } catch {
+                    print("Json数据转struct失败\(error)")
+                }
+           
+            }
+    }
+        ).resume()
+    }
+    
+    func getAllGroupsInfoById(userId: String) {
+        let queryItems = [
+            URLQueryItem(name: "id", value: userId),
+        ]
+        let request = ApiClient.shared.requestBuild(method: .get, suffix: Api.SUFFIX.GROUPS, queryItems: queryItems)
+        URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) ->  Void  in
+            if  error !=  nil {
+                print (error.debugDescription)
+            } else {
+                do {
+                    guard let jsonData = data else {
+                        return
+                    }
+                    self.group = try
+                    self.decoder.decode(GroupInfo.self, from: jsonData)
+                    print(self.group)
+                } catch {
+                    print("Json数据转struct失败\(error)")
+                }
+            }
+    }
+        ).resume()
+    }
+    
 }

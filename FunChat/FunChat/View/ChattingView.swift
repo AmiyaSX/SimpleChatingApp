@@ -9,56 +9,52 @@ import SwiftUI
 import Starscream
 
 struct ChattingView: View {
-    @StateObject private var messageViewModel = MessageViewModel()
+    
+    @StateObject private var messageViewModel =  MessageViewModel()
+    @EnvironmentObject private var loginViewModel: LoginViewModel
+    
     @State var userName: String?
-    @State private var message: String = ""
+    @State private var typingMsg: String = ""
     @State private var isEditing = false
-    @State private var isKeyboardShow = false
-    @State private var sendUserInfo: UserInfo?
-    @State private var receivedUserInfo: UserInfo?
+    @State private var isKeyboardShow = true
     @State private var showAlert = false
-    private var fromScene: Int32?
-    let url = URL(string: "https://xhzq.xyz/23333")
-//    private var messagesView: some View {
-//
-//
-    }
+    @Binding var chattingPagePresented: Bool
     
     private var sendView: some View {
         HStack(spacing: 0) {
             ZStack(alignment: .leading) {
-                TextEditor(text: $message)
+                TextEditor(text: $typingMsg)
                     .frame(maxWidth: .infinity)
                     .frame(height: 36)
+                    .cornerRadius(8)
                     .multilineTextAlignment(.leading)
                     .font(.system(size: 14, weight: .regular))
                     .foregroundColor(Color.black)
-                    .padding(.horizontal, 12)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.gray))
-                if message.isEmpty {
+                    .padding(1)
+                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.blue))
+                if typingMsg.isEmpty {
                     Text("Type a message")
                         .font(.system(size: 14, weight: .regular))
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.gray)
                         .lineLimit(1)
-                        .padding(.horizontal, 16)
+                        .padding(.horizontal, 10)
                         .alignmentGuide(.leading) { _ in 0 }
                 }
             }
-            
             Spacer().frame(width: 8)
-            
             Button{
-                showAlert = message.isEmpty
-                if !message.isEmpty {
-                    sendMessage(content: message)
+                showAlert = typingMsg.isEmpty
+                if !typingMsg.isEmpty {
+                    let message = Message(content: typingMsg, isCurrentUser: true)
+                    sendMessage(message: message)
                 }
             } label: {
                 Text("send")
                     .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color.white)
                     .padding(.vertical, 9.5)
                     .padding(.horizontal, 8.5)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.orange))
+                    .background(RoundedRectangle(cornerRadius: 10).fill(Color.blue))
             }.alert("Can't send an empty message! ",isPresented: $showAlert) {
                 Button("OK", role: .cancel) { }
             }
@@ -66,33 +62,63 @@ struct ChattingView: View {
         }.padding(.horizontal, 8)
         .padding(.vertical, 8)
         .background(Color.white)
-        .keyboardAwarePadding(isKeyboardShow: $isKeyboardShow)
     }
     
     var body: some View {
-        VStack {
-            HStack(spacing: 0) {
-                Spacer().frame(width: 8)
-                
-                Text(receivedUserInfo?.name ?? "")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(Color.black)
-                    .lineLimit(1)
+        NavigationView {
+            VStack(spacing: 0) {
+                Spacer().frame(height: 8)
+//                Text(messageViewModel.group?.Name ?? "Public")
+//                    .font(.system(size: 18, weight: .bold))
+//                    .lineLimit(1)
+//                    .padding()
+                Divider()
                 Spacer()
-                    
+                ScrollViewReader { proxy in
+                    ScrollView {
+                        ForEach(messageViewModel.messageList, id: \.self) {
+                            msg in MessageItemView(crtMsg: msg)
+                        }
+                        .scaleEffect(x: 1, y: -1, anchor: .center)
+                    }
+                    .scaleEffect(x: 1, y: -1, anchor: .center)
+                }
+                Spacer()
+                Divider()
+                sendView
             }
-            Spacer()
-            sendView
+            .navigationBarItems(leading: Button(action: {
+                chattingPagePresented = false
+            }, label: {
+                Image("icon_back")
+            }))
+            .navigationTitle(messageViewModel.group?.Name ?? "Title")
+            .navigationBarTitleDisplayMode(.inline)
+            .onAppear() {
+                getAllGroupsInfoById()
+                loadHistoryMessage()
+            }
+            .onTapGesture(perform: {
+                self.hideKeyboard()
+            }).environmentObject(loginViewModel)
+                .environmentObject(messageViewModel)
         }
+       
     }
     
-    private func sendMessage(content: String) {
-        messageViewModel.sendMessage(content: content, fromScene: fromScene)
+    private func sendMessage(message: Message) {
+        messageViewModel.sendMessage(message: message)
+        typingMsg = ""
     }
-}
-
-struct ChattingView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChattingView()
+    
+    private func loadHistoryMessage() {
+        messageViewModel.loadMessage(date: "2100-06-29T18:47:20.925", groupId: "1")
+    }
+    
+    private func getAllGroupsInfoById() {
+        guard let userId = UserDefaults.standard.string(forKey: "id") else {
+            return
+        }
+        messageViewModel.getAllGroupsInfoById(userId: userId)
     }
 }

@@ -1,24 +1,16 @@
 PODS:
-  - chatPlayground (0.1.0):
-    - Starscream
   - Starscream (4.0.4)
 
 DEPENDENCIES:
-  - chatPlayground (from `chatPlayground`)
   - Starscream (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Starscream
 
-EXTERNAL SOURCES:
-  chatPlayground:
-    :path: chatPlayground
-
 SPEC CHECKSUMS:
-  chatPlayground: b7fd62d792f028c72b559b42df2a3562cbb35b81
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
 
-PODFILE CHECKSUM: 907d2680cf4fc5d4f4a1acc50af1521a8759bc4a
+PODFILE CHECKSUM: bfe17a2bff55db417046d197f189e001088a8562
 
 COCOAPODS: 1.11.3
