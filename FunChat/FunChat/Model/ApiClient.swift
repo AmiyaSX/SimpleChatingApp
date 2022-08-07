@@ -12,12 +12,9 @@ public class ApiClient {
     public static let shared = ApiClient()
     
     let urlbase = URL(string: Api.BASE_URL.baseUrl)
-    
-    private static let timeoutMS = 20_000
-    private static let RECONNECT_MAX_COUNT = 3 // 最多重连次数
+
     private let defaults = UserDefaults.standard
-    
-    private var state = SocketConnectState.disConnect
+
     private var socket: WebSocket?
     
     let decoder = JSONDecoder()
@@ -40,10 +37,12 @@ public class ApiClient {
         guard let token = defaults.string(forKey: defaultKeys.token) else {
             return request
         }
+        print(defaults.string(forKey: defaultKeys.token))
         request.addValue(token, forHTTPHeaderField: "Authorization")
         guard let id = defaults.string(forKey: defaultKeys.id) else {
             return request
         }
+        print(defaults.string(forKey: defaultKeys.id))
         request.addValue(id, forHTTPHeaderField: "ID")
         return request
     }

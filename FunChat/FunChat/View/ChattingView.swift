@@ -10,7 +10,7 @@ import Starscream
 
 struct ChattingView: View {
     
-    @StateObject private var messageViewModel =  MessageViewModel()
+    @EnvironmentObject private var messageViewModel: MessageViewModel
     @EnvironmentObject private var loginViewModel: LoginViewModel
     
     @State var userName: String?
@@ -18,7 +18,10 @@ struct ChattingView: View {
     @State private var isEditing = false
     @State private var isKeyboardShow = true
     @State private var showAlert = false
-    @Binding var chattingPagePresented: Bool
+    @State private var groupName = "Group"
+//    @Binding var chattingPagePresented: Bool
+    
+    @State var groupId: String
     
     private var sendView: some View {
         HStack(spacing: 0) {
@@ -48,6 +51,8 @@ struct ChattingView: View {
                     let message = Message(content: typingMsg, isCurrentUser: true)
                     sendMessage(message: message)
                 }
+                messageViewModel.loadMessage(date: "2022-06-29T18:47:20.925", groupId: groupId)
+                groupName = messageViewModel.group?.Name ?? "Group"
             } label: {
                 Text("send")
                     .font(.system(size: 14, weight: .semibold))
@@ -65,13 +70,13 @@ struct ChattingView: View {
     }
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack(spacing: 0) {
-                Spacer().frame(height: 8)
-//                Text(messageViewModel.group?.Name ?? "Public")
-//                    .font(.system(size: 18, weight: .bold))
-//                    .lineLimit(1)
-//                    .padding()
+//                Spacer().frame(height: 8)
+                Text(groupName)
+                    .font(.system(size: 18, weight: .bold))
+                    .lineLimit(1)
+                    .padding()
                 Divider()
                 Spacer()
                 ScrollViewReader { proxy in
@@ -87,32 +92,41 @@ struct ChattingView: View {
                 Divider()
                 sendView
             }
-            .navigationBarItems(leading: Button(action: {
-                chattingPagePresented = false
-            }, label: {
-                Image("icon_back")
-            }))
-            .navigationTitle(messageViewModel.group?.Name ?? "Title")
-            .navigationBarTitleDisplayMode(.inline)
-            .onAppear() {
-                getAllGroupsInfoById()
-                loadHistoryMessage()
-            }
+//            .navigationBarItems(leading: Button(action: {
+//               showHomePage = false
+//           }, label: {
+//               Image("icon_back")
+//           }))
+//            .navigationTitle(messageViewModel.group?.Name ?? "Group")
+//            .navigationBarTitleDisplayMode(.inline)
+//            .onAppear() {
+//                getAllGroupsInfoById()
+//                loadHistoryMessage()
+//            }
             .onTapGesture(perform: {
                 self.hideKeyboard()
-            }).environmentObject(loginViewModel)
-                .environmentObject(messageViewModel)
-        }
+            })
+            .environmentObject(loginViewModel)
+            .environmentObject(messageViewModel)
+            .onLongPressGesture {
+                messageViewModel.loadMessage(date: "2022-06-29T18:47:20.925", groupId: groupId)
+            }
+            .onReceive(messageViewModel.$receiveNewMessages, perform: { _ in
+                    self.loadHistoryMessage()
+            })
+//        }
        
     }
     
     private func sendMessage(message: Message) {
         messageViewModel.sendMessage(message: message)
+        messageViewModel.receiveNewMessages.append(Message(content: message.content, isCurrentUser: false))
+//        loadHistoryMessage()
         typingMsg = ""
     }
     
     private func loadHistoryMessage() {
-        messageViewModel.loadMessage(date: "2100-06-29T18:47:20.925", groupId: "1")
+        messageViewModel.loadMessage(date: "2100-06-29T18:47:20.925", groupId: groupId)
     }
     
     private func getAllGroupsInfoById() {

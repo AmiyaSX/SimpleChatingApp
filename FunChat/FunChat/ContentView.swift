@@ -12,12 +12,15 @@ struct ContentView: View {
     
     @StateObject private var messageViewModel =  MessageViewModel()
     @StateObject private var loginViewModel =  LoginViewModel()
-
+    @StateObject private var accountViewModel = AccountViewModel()
+    
     var body: some View {
         ZStack {
             LoginView()
         }
+        .environmentObject(messageViewModel)
         .environmentObject(loginViewModel)
+        .environmentObject(accountViewModel)
     }
     
 }

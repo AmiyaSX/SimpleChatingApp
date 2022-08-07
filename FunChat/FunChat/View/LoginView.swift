@@ -12,9 +12,9 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var verifyCode: String = ""
     @State private var showAlert = false
-    @State var chattingPagePresented: Bool = false
+    @State var homePresented: Bool = false
     @EnvironmentObject private var loginViewModel: LoginViewModel
-    
+    @EnvironmentObject private var messageViewModel: MessageViewModel
     var body: some View {
         ZStack {
             VStack {
@@ -83,20 +83,20 @@ struct LoginView: View {
                     })
                     .padding()
             }.frame(width: DisplayUtil.getScreenWidth(), height: DisplayUtil.getScreenHeight(), alignment: .center)
-        }.fullScreenCover(isPresented: $chattingPagePresented, content: {
-            ChattingView(chattingPagePresented: $chattingPagePresented).environmentObject(loginViewModel)
+        }.fullScreenCover(isPresented: $homePresented, content: {
+            HomeView(showHomePage: $homePresented)
+                .environmentObject(loginViewModel)
+                .environmentObject(messageViewModel)
         })
         .onTapGesture(perform: {
             self.hideKeyboard()
         })
         .onAppear() {
-            chattingPagePresented = false
-            email = "428379791@qq.com"
-            loginViewModel.isEnteringCode = true
+            homePresented = false
         }
         .onReceive(loginViewModel.$isCodeValid, perform: { _ in
             if loginViewModel.isCodeValid {
-                chattingPagePresented = true
+                homePresented = true
             }
         })
     }

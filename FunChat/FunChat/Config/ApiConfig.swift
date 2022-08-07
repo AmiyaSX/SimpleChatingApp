@@ -34,11 +34,6 @@ public enum Method {
     case put
 }
 
-public enum SocketConnectState {
-    case disConnect
-    case connecting
-    case connected
-}
 
 struct defaultKeys {
     static let name = "name"

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AccountViewModel {
+class AccountViewModel: ObservableObject {
     
     private var decoder = ApiClient.shared.decoder
     private var encoder = ApiClient.shared.encoder

@@ -13,7 +13,9 @@
 		7A1506C1288D220600E9D88A /* View++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1506C0288D220600E9D88A /* View++.swift */; };
 		7A58ECAD28869C54006D59DC /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58ECAC28869C54006D59DC /* Message.swift */; };
 		7A58ECB02886A444006D59DC /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A58ECAF2886A444006D59DC /* MessageViewModel.swift */; };
-		7A8D0FD228928D0B00CC9F90 /* MessageConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D0FD128928D0B00CC9F90 /* MessageConst.swift */; };
+		7A7C7B12289F768E009895C6 /* WebSocketClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7C7B11289F768E009895C6 /* WebSocketClient.swift */; };
+		7A7C7B14289F9327009895C6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7C7B13289F9327009895C6 /* TabBar.swift */; };
+		7A8D0FD228928D0B00CC9F90 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D0FD128928D0B00CC9F90 /* Consts.swift */; };
 		7A8D0FD52892966800CC9F90 /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D0FD42892966800CC9F90 /* ApiConfig.swift */; };
 		7A8D0FD7289389A700CC9F90 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D0FD6289389A700CC9F90 /* ApiClient.swift */; };
 		7A8D0FD9289E692E00CC9F90 /* Color++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A8D0FD8289E692E00CC9F90 /* Color++.swift */; };
@@ -59,7 +61,9 @@
 		7A1506C0288D220600E9D88A /* View++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View++.swift"; sourceTree = "<group>"; };
 		7A58ECAC28869C54006D59DC /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		7A58ECAF2886A444006D59DC /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
-		7A8D0FD128928D0B00CC9F90 /* MessageConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageConst.swift; sourceTree = "<group>"; };
+		7A7C7B11289F768E009895C6 /* WebSocketClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketClient.swift; sourceTree = "<group>"; };
+		7A7C7B13289F9327009895C6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		7A8D0FD128928D0B00CC9F90 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		7A8D0FD42892966800CC9F90 /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
 		7A8D0FD6289389A700CC9F90 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		7A8D0FD8289E692E00CC9F90 /* Color++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color++.swift"; sourceTree = "<group>"; };
@@ -122,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				7A8D0FD42892966800CC9F90 /* ApiConfig.swift */,
-				7A8D0FD128928D0B00CC9F90 /* MessageConst.swift */,
+				7A8D0FD128928D0B00CC9F90 /* Consts.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -130,6 +134,8 @@
 		7A8D0FD32892961700CC9F90 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A8D0FD6289389A700CC9F90 /* ApiClient.swift */,
+				7A7C7B11289F768E009895C6 /* WebSocketClient.swift */,
 				7AC4A72428869B2600DA588E /* Data */,
 			);
 			path = Model;
@@ -206,6 +212,7 @@
 				7AC4A72028869A4F00DA588E /* ChattingView.swift */,
 				7AC4A72228869B0400DA588E /* HomeView.swift */,
 				7A8D0FDE289E69FE00CC9F90 /* MessageItemView.swift */,
+				7A7C7B13289F9327009895C6 /* TabBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,7 +220,6 @@
 		7AC4A718288698A200DA588E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7A8D0FD6289389A700CC9F90 /* ApiClient.swift */,
 				7A58ECAF2886A444006D59DC /* MessageViewModel.swift */,
 				7A8D0FDA289E695100CC9F90 /* LoginViewModel.swift */,
 				7A8D0FDC289E695E00CC9F90 /* AccountViewModel.swift */,
@@ -430,10 +436,12 @@
 				7A8D0FD7289389A700CC9F90 /* ApiClient.swift in Sources */,
 				7A58ECB02886A444006D59DC /* MessageViewModel.swift in Sources */,
 				7AC4A72328869B0400DA588E /* HomeView.swift in Sources */,
+				7A7C7B14289F9327009895C6 /* TabBar.swift in Sources */,
 				7A8D0FD52892966800CC9F90 /* ApiConfig.swift in Sources */,
 				7A8D0FDF289E69FE00CC9F90 /* MessageItemView.swift in Sources */,
 				7AC4A6EE288691B800DA588E /* FunChatApp.swift in Sources */,
 				7A8D0FDB289E695100CC9F90 /* LoginViewModel.swift in Sources */,
+				7A7C7B12289F768E009895C6 /* WebSocketClient.swift in Sources */,
 				7AC4A72128869A4F00DA588E /* ChattingView.swift in Sources */,
 				7A8D0FDD289E695E00CC9F90 /* AccountViewModel.swift in Sources */,
 				7A1506C1288D220600E9D88A /* View++.swift in Sources */,
@@ -442,7 +450,7 @@
 				7A1506BB288C01EC00E9D88A /* DisplayUtil.swift in Sources */,
 				7AC4A71D288699DE00DA588E /* LoginView.swift in Sources */,
 				7A1506B9288BB1E900E9D88A /* UserInfo.swift in Sources */,
-				7A8D0FD228928D0B00CC9F90 /* MessageConst.swift in Sources */,
+				7A8D0FD228928D0B00CC9F90 /* Consts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

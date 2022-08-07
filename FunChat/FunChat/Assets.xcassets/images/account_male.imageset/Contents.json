@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "account_male_unselected_ic.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "account_male_unselected_ic.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

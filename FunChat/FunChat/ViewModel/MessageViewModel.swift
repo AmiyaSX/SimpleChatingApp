@@ -12,21 +12,23 @@ class MessageViewModel: ObservableObject {
     var didChange = PassthroughSubject<Void, Never>()
     public var loadMessages: [MessageInfo] = []
     @Published public var receiveNewMessages: [Message] = []
+    @Published public var groupId: String = "1"
     public var messageList: [Message] = []
     public var groups: [GroupInfo] = []
     public var group: GroupInfo?
+    
     private var decoder = ApiClient.shared.decoder
     private var encoder = ApiClient.shared.encoder
     
     private let defaults = UserDefaults.standard
     
-    private var toUid: Int64 = 0
     
     init() {
-        
+        WebSocketClient.shard.connectSocket(nil)
     }
     
     func sendMessage(message: Message) {
+        WebSocketClient.shard.sendMessage(message.content, isImage: false, repTo: 0)
         messageList.append(message)
         didChange.send(())
     }
@@ -42,6 +44,8 @@ class MessageViewModel: ObservableObject {
                 print (error.debugDescription)
             } else {
                 do {
+                    let  str =  String (data: data!, encoding:  String . Encoding .utf8)
+                    print (str ?? "message in group " + groupId)
                     guard let jsonData = data else {
                         return
                     }
@@ -50,11 +54,15 @@ class MessageViewModel: ObservableObject {
                     self.handleLoadMessage()
                     print(self.loadMessages)
                 } catch {
-                    print("Json数据转struct失败\(error)")
+                    print("message: Json数据转struct失败\(error) group: " + groupId)
                 }
             }
     }
         ).resume()
+    }
+    
+    func loadHistoryMessage(groupId: String) {
+         self.loadMessage(date: MESSAGE_LOAD_TIME, groupId: groupId)
     }
     
     private func handleLoadMessage() {
@@ -87,7 +95,7 @@ class MessageViewModel: ObservableObject {
                     self.decoder.decode([GroupInfo].self, from: jsonData)
                     print(self.groups)
                 } catch {
-                    print("Json数据转struct失败\(error)")
+                    print("groups Info: Json数据转struct失败\(error)")
                 }
            
             }
@@ -105,6 +113,8 @@ class MessageViewModel: ObservableObject {
                 print (error.debugDescription)
             } else {
                 do {
+                    let  str =  String (data: data!, encoding:  String . Encoding .utf8)
+                    print (str ?? "group ")
                     guard let jsonData = data else {
                         return
                     }
@@ -112,7 +122,7 @@ class MessageViewModel: ObservableObject {
                     self.decoder.decode(GroupInfo.self, from: jsonData)
                     print(self.group)
                 } catch {
-                    print("Json数据转struct失败\(error)")
+                    print("groups Info: Json数据转struct失败\(error)")
                 }
             }
     }

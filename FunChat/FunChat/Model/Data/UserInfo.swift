@@ -17,7 +17,7 @@ public protocol UserApi: AnyObject {
 
 
 struct UserIdentify: Codable {
-    let ID: Int64
+    let ID: Int32
     let Email: String
     let Token: String
     let Name: String
@@ -25,6 +25,7 @@ struct UserIdentify: Codable {
 }
 
 struct Account: Codable {
+    let ID: Int32
     let Email: String
     let Name: String
     let Banned: Bool

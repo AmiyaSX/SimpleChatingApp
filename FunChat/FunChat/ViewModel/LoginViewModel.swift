@@ -8,7 +8,7 @@
 import Foundation
 
 class LoginViewModel: ObservableObject {
-    var user: UserIdentify?
+    
     @Published var isRegister: Bool = false
     @Published var isEnteringCode = false
     @Published var isCodeValid = true
@@ -16,6 +16,7 @@ class LoginViewModel: ObservableObject {
     private var decoder = ApiClient.shared.decoder
     private var encoder = ApiClient.shared.encoder
     private let defaults = UserDefaults.standard
+    var user: UserIdentify?
     
     init() {}
     
@@ -59,10 +60,12 @@ class LoginViewModel: ObservableObject {
                     }
                     self.user = try self.decoder.decode(UserIdentify.self, from: jsonData)
                     self.defaults.setValue(self.user?.Token, forKey: defaultKeys.token)
+                    print(self.defaults.string(forKey: defaultKeys.token))
                     self.defaults.setValue(self.user?.ID, forKey: defaultKeys.id)
+                    print(self.defaults.string(forKey: defaultKeys.id))
                     print(self.user)
                 } catch {
-                    print("Json数据转struct失败\(error)")
+                    print("login: Json数据转struct失败\(error)")
                 }
             }
     }

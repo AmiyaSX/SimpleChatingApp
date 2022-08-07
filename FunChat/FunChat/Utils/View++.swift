@@ -25,6 +25,15 @@ public extension View {
         }
     }
     
+  
+    func tabBarItem<I: Hashable, V: View>(_ index: I, @ViewBuilder _ label: () -> V) -> some View {
+        modifier(TabBarItemModifier(index: index, label: label()))
+    }
+    
+    /// Wraps view inside `AnyView`
+    func embedInAnyView() -> AnyView {
+        AnyView(self)
+    }
     
     /// Hide or show the view based on a boolean value.
     ///
@@ -64,6 +73,19 @@ public extension View {
         )
     }
 
+}
+
+@available(iOS 13.0, *)
+struct TabBarItemModifier<SelectionValue: Hashable, Label: View>: ViewModifier {
+    var index: SelectionValue
+    var label: Label
+
+    func body(content: Content) -> some View {
+        content.opacity(index == model.selection ? 1 : 0)
+            .preference(key: TabBarItemPreferenceKey.self, value: [.init(index: index, label: label.embedInAnyView())])
+    }
+
+    @EnvironmentObject var model: TabBarModel<SelectionValue>
 }
 
 

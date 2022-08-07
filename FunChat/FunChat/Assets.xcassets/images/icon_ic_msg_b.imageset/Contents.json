@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "account_female_unselected_ic.png",
+      "filename" : "icon_ic_msg_b.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "icon_ic_msg_b-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "icon_ic_msg_b-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

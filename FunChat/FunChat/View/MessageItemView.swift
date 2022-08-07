@@ -19,14 +19,14 @@ struct MessageItemView: View {
                     .foregroundColor( Color.white)
                     .background(Color.blue)
                     .cornerRadius(10)
-                Image(systemName: "person")
+                Image("account_male")
                     .resizable()
                     .frame(width: 40, height: 40, alignment: .center)
                     .cornerRadius(20)
             }.padding()
             } else {
                 HStack(alignment: .top, spacing: 15) {
-                    Image(systemName: "person")
+                    Image("account_female")
                         .resizable()
                         .frame(width: 40, height: 40, alignment: .center)
                         .cornerRadius(20)

@@ -14,11 +14,11 @@ struct Message: Hashable {
 }
 
 struct MessageInfo: Codable {
-    let ID: Int
-    let Group: Int
-    let Sender: Int
+    let ID: Int32
+    let Group: Int32
+    let Sender: Int32
     let Content: String
-    let RepTo: Int
+    let RepTo: Int32
     let IsImage: Bool
     let Time: String
 }
